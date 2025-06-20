@@ -49,6 +49,8 @@ This project provides a lightweight Linux system resource monitoring solution th
 * Supports alerting via: Slack(Webhook) and Email(SMTB-Baesd).
 * Prevents alert storms with a cooldown mechanism.
 
+![Slack Alert](assets/Slack_Alert.png)
+
 ### 6. Dashboard (`monitoring/dashboard.py`)
 
 * Developed with Plotly Dash to provide an interactive web-based interface.
