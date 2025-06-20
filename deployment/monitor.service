@@ -1,0 +1,19 @@
+[Unit]
+Description=Resource Monitor Service
+After=network.target ingestion.service
+Requires=ingestion.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/EDGE/EDGE/Project
+ExecStart=/home/ubuntu/EDGE/.venv/bin/python monitor.py
+Restart=always
+RestartSec=10s
+Environment="PYTHONUNBUFFERED=1"
+StandardOutput=file:/home/ubuntu/EDGE/EDGE/Project/logs/monitor.log
+StandardError=file:/home/ubuntu/EDGE/EDGE/Project/logs/monitor_error.log
+
+[Install]
+WantedBy=multi-user.target

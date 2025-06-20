@@ -1,0 +1,30 @@
+interval: 5
+# Alerting thresholds (%) and cooldown (seconds)
+alerts:
+  thresholds:
+    cpu: 85
+    memory: 80
+    disk: 90
+  cooldown: 300  # 5 minutes
+  slack:
+    enabled: true
+  email:
+    enabled: false
+    recipient: "yankitsharma007@gmail.com"
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender: "sahil221sh@gmail.com"
+    
+
+# Cloud ingestion endpoint
+cloud:
+  endpoint: "http://localhost:8000/ingest"
+
+# Host identifier (for alerts/metrics)
+hostname: "server01"  # Dynamically set via `socket.gethostname()` if omitted
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "json"  # For structured logs
+  file: "/var/log/monitor.log"

@@ -1,0 +1,19 @@
+[Unit]
+Description=Web Dashboard Service
+After=network.target ingestion.service
+Requires=ingestion.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/EDGE/EDGE/Project
+ExecStart=/home/ubuntu/EDGE/.venv/bin/python dashboard.py
+Restart=always
+RestartSec=5s
+Environment="PYTHONUNBUFFERED=1"
+StandardOutput=file:/home/ubuntu/EDGE/EDGE/Project/logs/dashboard.log
+StandardError=file:/home/ubuntu/EDGE/EDGE/Project/logs/dashboard_error.log
+
+[Install]
+WantedBy=multi-user.target

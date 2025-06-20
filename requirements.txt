@@ -1,0 +1,12 @@
+psutil
+PyYAML
+requests
+fastapi
+uvicorn
+dotenv
+pyyaml
+influxdb-client
+pytest>=7.0
+tenacity
+influx_client
+dash

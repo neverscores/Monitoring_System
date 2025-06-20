@@ -1,0 +1,38 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment directories
+.venv/
+venv/
+myenv/
+
+# Logs
+logs/
+*.log
+
+# Data files / runtime DB files (InfluxDB engine data)
+collector/influxdb/engine/data/
+collector/influxdb/engine/wal/
+collector/influxdb/influxd.bolt
+collector/influxdb/influxd.sqlite
+
+# System files / OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor config files
+.vscode/
+.idea/
+
+# Others
+*.swp
+*.swo
+
+# Environment variable files
+.env
+
+# Accidental files
+=7.0
